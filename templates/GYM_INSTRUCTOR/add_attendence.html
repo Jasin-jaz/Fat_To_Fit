@@ -1,0 +1,88 @@
+{% extends "GYM_INSTRUCTOR/gymindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+    <script type="text/javascript">
+var xmlHttp;
+            function adds(eid){
+               alert(eid);
+                if (typeof XMLHttpRequest != "undefined"){
+                xmlHttp= new XMLHttpRequest();
+                }
+                else if (window.ActiveXObject){
+                    xmlHttp= new ActiveXObject("Microsoft.XMLHTTP");
+                }
+                if (xmlHttp==null){
+                    alert("Browser does not support XMLHTTP Request")
+                    return;
+                }
+                var url="/attuserview/"+eid
+                xmlHttp.onreadystatechange = stateChange;
+                xmlHttp.open("GET", url, true);
+                xmlHttp.send(null);
+            }
+
+            function stateChange(){
+                if(xmlHttp.readyState==4 || xmlHttp.readyState=="complete"){
+                    document.getElementById("sub").innerHTML=xmlHttp.responseText
+
+                }
+            }
+</script>
+<style>
+   h2{
+  margin-left:250px;
+  margin-right:10px
+}
+</style>
+</head>
+
+<body><form action="" method="post">
+  <h2>TAKE ATTENDANCE</h2><br>
+  <div  style="margin-left: 120px;margin-right: 0%;">
+    <table class="table table-borderless">
+      <tr>
+        <th width="111" scope="row">BATCH</th>
+        <td width="288"><label for="select"></label>
+          <select name="select" id="select" onchange="adds(this.value)">
+          <option>select</option>
+              {% for i in data %}
+              <option value="{{ i['id'] }}">{{ i['batch'] }}</option>
+              {% endfor %}
+
+        </select></td>
+      </tr>
+      <tr>
+        <th scope="row">USERNAME</th>
+        <td><label for="textfield"></label>
+       <select name="u" id="sub" class="form-control">
+           <option>select</option>
+
+       </select></td>
+      </tr>
+      <tr>
+        <th scope="row">ATTENDENCE</th>
+        <td><p>
+          <label>
+            <input type="radio" name="CheckboxGroup1" value="PRESENT" id="CheckboxGroup1_0" />
+            PRESENT</label>
+          <br />
+          <label>
+            <input type="radio" name="CheckboxGroup1" value="ABSENT" id="CheckboxGroup1_1" />
+            ABSENT</label>
+          <br />
+        </p></td>
+      </tr>
+      <tr>
+          <th></th>
+        <th height="90"  scope="row"><br><input type="submit" name="button" id="button" value="ADD" class="btn btn-dark"/></th>
+      </tr>
+  </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

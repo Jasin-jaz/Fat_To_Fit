@@ -1,0 +1,41 @@
+{% extends "GYM_INSTRUCTOR/gymindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Complaints</title>
+</head>
+<body>
+    <div align="center">
+    <h1>COMPLAINTS SEND</h1><br>
+    {% if data %}
+        <table class="table table-condensed">
+            <tr>
+                <th></th>
+                <th>Complaint ID</th>
+                <th>Sender ID</th>
+                <th>Complaints</th>
+                <th>Date</th>
+                <th>Reply</th>
+                <th>Reply Date</th>
+            </tr>
+            {% for i in data %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ i['COMPLAINT_ID'] }}</td>
+                    <td>{{ i['SENDER_ID' ] }}</td>
+                    <td>{{ i['COMPLAINTS'] }}</td>
+                    <td>{{ i['DATE'] }}</td>
+                    <td>{{ i['REPLY'] }}</td>
+                    <td>{{ i['REPLY_DATE'] }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No complaints found.</p>
+    {% endif %}
+    </div>
+</body>
+</html>
+{% endblock %}

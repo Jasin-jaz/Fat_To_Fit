@@ -1,0 +1,30 @@
+{% extends "GYM_INSTRUCTOR/gymindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>medicines</title>
+</head>
+
+<body><form action="" method="get"><table class="table table-borderless">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">MEDICINE_NAME</th>
+    <th scope="col">MEDICINE_DETAILS</th>
+    <th scope="col">MEDICINE_PRICE</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+  <tr>
+      {% for i in data %}
+    <td>&nbsp;{{ loop.index }}</td>
+    <td>&nbsp;{{ i['MEDICINE_NAME'] }}</td>
+    <td>{{ i['MEDICINE_DETAILS'] }}</td>
+    <td>{{ i['MEDICINE_PRICE'] }}</td>
+  </tr>
+    {% endfor %}
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

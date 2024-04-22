@@ -1,0 +1,41 @@
+{% extends "ADMIN/adminindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+  <form action="" method="get">
+  <div align="center">
+  <h2>GYM INSTRUCTORS</h2><br>
+  <table class="table table-condensed">
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">NAME</th>
+    <th scope="col">ADDRESS</th>
+    <th scope="col">PHONE</th>
+    <th scope="col">PROFILE</th>
+    <th scope="col">EMAIL_ID</th>
+      <th></th>
+    </tr>
+     {% for i in data %}
+  <tr>
+    <td>&nbsp;{{ loop.index }}</td>
+    <td>&nbsp;{{ i['name'] }}</td>
+    <td>House name:{{ i['housename'] }}Place:{{ i['place']}}<br> Post:{{  i['post'] }}<br>
+    Pin:{{ i['pin'] }}</td>
+    <td>&nbsp;{{ i['phone'] }}</td>
+    <td><img src=" {{ i['pic']}}" width="50"></td>
+    <td>{{ i['email'] }}</td>
+    <td><a href="/newinsert/{{ i['id'] }}/{{ uid }}">ALLOCATE</a><br/>
+    </td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+</form>
+</body>
+</html>
+{% endblock %}

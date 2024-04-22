@@ -1,0 +1,77 @@
+{% extends "ADMIN/adminindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Add Employee</title>
+</head>
+
+<body>
+<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <div align="center">
+  <h2>ADD EMPLOYEE</h2>
+    <table class="table table-borderless">
+      <tr>
+        <th scope="row">NAME</th>
+        <td><label for="textfield"></label>
+        <input type="text" name="textfield" id="textfield" class="form-control"/></td>
+      </tr>
+      <tr>
+        <th height="72" scope="row">HOUSE NAME</th>
+        <td><label for="textfield7"></label>
+        <input type="text" name="textfield7" id="textfield7" class="form-control" /></td>
+      </tr>
+      
+      <tr>
+        <th height="51" scope="row">PLACE</th>
+        <td><label for="textfield5"></label>
+        <input type="text" name="textfield5" id="textfield5" class="form-control"  /></td>
+        
+      </tr>
+      <tr>
+        <th height="46" scope="row">POST</th>
+        <td><label for="textfield6"></label>
+        <input type="text" name="textfield6" id="textfield5" class="form-control"  /></td>
+        
+      </tr>
+      <tr>
+        <th height="63" scope="row">PIN</th>
+        <td><label for="textfield2"></label>
+        <input type="text" name="textfield2" id="textfield2" class="form-control" /></td>
+      </tr>
+      <tr>
+        <th height="64" scope="row">PHONE</th>
+        <td><label for="textfield3"></label>
+        <input type="text" name="textfield3" id="textfield3"  class="form-control" /></td>
+      </tr>
+      <tr>
+        <th scope="row">PROFILE</th>
+        <td><label for="fileField"></label>
+        <input type="file" name="fileField" id="fileField"  class="form-control" /></td>
+      </tr>
+      <tr>
+        <th height="74" scope="row">EMAIL_ID</th>
+        <td><label for="textfield4"></label>
+        <input type="text" name="textfield4" id="textfield4"  class="form-control" /></td>
+      </tr>
+      <tr>
+      <tr>
+        <th height="74" scope="row">TYPE</th>
+        <td><label for="select"></label>
+          <select name="select" id="select" class="form-control">
+            <option value="gym instructor">gym instructor</option>
+            <option value="physician">physician</option>
+        </select></td>
+      </tr>
+      <tr>
+          <th></th>
+        <th  scope="row"><br><input type="submit" name="button" id="button" value="ADD" class="btn btn-dark"/></th>
+      </tr>
+  </table>
+  </div>
+
+</form>
+</body>
+</html>
+{% endblock %}

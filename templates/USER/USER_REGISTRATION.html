@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+  .wrap-login100 {
+    width: 560px;
+    font-size: normal;
+    font-family: Raleway-Medium;
+    color: #ffffff;
+    background: #202342;
+    border-radius: 10px;
+    position: relative;
+    margin: 0 auto; /* Center the form on the page */
+    padding: 20px; /* Add some padding for better spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  }
+
+  .wrap-login100 h2{
+    font-family:sans-serif;
+    font-size: 23px;
+    display: block;
+  }
+
+  /* Add any additional styles you may need for form elements */
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    margin: 0px 0;
+    box-sizing: border-box;
+  }
+
+  .btn-dark {
+    background-color: #343a40;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-dark:hover {
+  background-color: #57b846;
+}
+
+.btn-dark.active {
+  background-color: #57b846;
+}
+</style>
+</head>
+
+<body>
+<div align="center" class="wrap-login100">
+<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <h2>USER REGISTRATION</h2>
+    <table class="table table-borderless">
+      <tr>
+        <th width="96" height="44" scope="row" align="left">Name</th>
+        <td width="313"><label for="textfield"></label>
+        <input type="text" name="textfield" id="textfield" CLASS="form-control" required/></td>
+      </tr>
+      <tr>
+        <th height="55" scope="row" align="left">House name</th>
+        <td><label for="textfield7"></label>
+        <input type="text" name="textfield7" id="textfield7" class="form-control" required/></td>
+      </tr>
+
+      <tr>
+        <th height="50" scope="row" align="left">Place</th>
+        <td><label for="textfield5"></label>
+        <input type="text" name="textfield5" id="textfield5" class="form-control" required/></td>
+      </tr>
+      <tr>
+        <th height="50" scope="row" align="left">Post</th>
+        <td><label for="textfield2"></label>
+        <input type="text" name="textfield2" id="textfield2" class="form-control" required/></td>
+      </tr>
+
+      <tr>
+        <th height="50" scope="row" align="left">Pin</th>
+        <td><label for="textfield2"></label>
+        <input type="text" name="textfield6" id="textfield6" class="form-control" pattern="[0-9]*" maxlength="8" required/></td>
+      </tr>
+      <tr>
+        <th height="50" scope="row" align="left">Phone</th>
+        <td><label for="textfield3"></label>
+        <input type="text" name="textfield3" id="textfield3" class="form-control" pattern="[0-9]*" maxlength="10" required/></td>
+      </tr>
+      <tr>
+        <th height="30" scope="row" align="left">Profile</th>
+        <td><label for="fileField"></label>
+        <input type="file" name="fileField" id="fileField" class="form-control"/></td>
+      </tr>
+         <tr>
+        <th width="96" height="50" scope="row" align="left">Email-ID</th>
+        <td width="313"><label for="textfield10"></label>
+        <input type="email" name="textfield10" id="textfield10" CLASS="form-control" required/></td>
+      </tr>
+      <tr>
+        <th width="96" height="50" scope="row" align="left">Password</th>
+        <td width="313"><label for="textfield9"></label>
+        <input type="password" name="textfield9" id="textfield9" CLASS="form-control" required/></td>
+      </tr>
+      <tr>
+        <th></th>
+        <th height="50"  scope="row" align="left"><br><input type="submit" name="button" id="button" value="ADD" class="btn btn-dark"/></th>
+      </tr>
+  </table>
+  </div>
+
+</form>
+</body>
+</html>

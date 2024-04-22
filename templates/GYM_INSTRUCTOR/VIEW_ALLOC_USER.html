@@ -1,0 +1,52 @@
+{% extends "GYM_INSTRUCTOR/gymindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>allocated users</title>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <div align="center">
+    <h2>ALLOCATED USER INFORMATIONS</h2><br>
+  <table class="table table-condensed">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"> NAME</th>
+      <th scope="col">ADDRESS</th>
+      <th scope="col">PHONE</th>
+      <th scope="col">EMAIL </th>
+      <th scope="col">BATCH</th>
+      <th scope="col">IMAGE</th>
+        <th></th>
+
+
+    </tr>
+    <tr>
+        {% for i in data %}
+      <td>{{ loop.index }}</td>
+      <td>{{ i['name'] }}</td>
+      <td>HOUSE NAME: {{ i['hname'] }}<br>PLACE:{{ i['place'] }}<br>POST:{{ i['post'] }}<br>PIN:{{ i['pin'] }}</td>
+      <td>{{ i['phone'] }}</td>
+      <td>{{ i['email'] }}</td>
+      <td>{{ i['batch_id'] }}</td>
+      <td><img src=" {{ i['pic'] }}" width="50" height="50"></td>
+            <td>{% if i['STATUS']==None %}
+            <a href="/completion/{{ i['id'] }}">START</a>
+            {% elif i['STATUS']=='pending' %}
+                 <a href="/ucompletion/{{ i['ALLOCID'] }}">COMPLETED</a><br>
+                 <a href="/dcomletion/{{ i['ALLOCID'] }}">DROP</a>
+                {% else %}
+                {{ i['STATUS'] }}
+            {% endif %}
+            </td>
+
+    </tr>
+      {% endfor %}
+  </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

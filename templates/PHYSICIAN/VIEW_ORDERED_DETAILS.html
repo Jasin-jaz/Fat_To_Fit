@@ -1,0 +1,49 @@
+{% extends "PHYSICIAN/physician_INDEX.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>booked medicine</title>
+</head>
+<body>
+<form action="" method="get">
+<div align="center">
+  <h2>USER ORDERED MEDICINE</h2><br>
+  <table class="table table-condensed">
+      <tr>
+          <th></th>
+          <th>Profile</th>
+          <th>Username</th>
+          <th>Order id</th>
+          <th>Medicine</th>
+          <th>Medicine Price</th>
+          <th>Quantity</th>
+          <th>Amount</th>
+          <th>&nbsp;</th>
+      </tr>
+      {% for row in data %}
+          <tr>
+              <td>{{ loop.index }}</td>
+              <td><img src="{{ row.pic }}" width="200px" height="70px"></td>
+              <td>{{ row.username }}</td>
+              <td>{{ row.id }}</td>
+              <td>{{ row.medicine }}</td>
+              <td>{{ row.medicineprice }}</td>
+              <td>{{ row.quantity }}</td>
+              <td>{{ row.amount }}</td>
+              <td>
+              {% if row.status=='booked' %}
+                <a href="/approve/{{ row.id }}">APPROVE</a>
+              {% else %}
+                <span style="color:green">APPROVED</span>
+              {% endif %}
+              </td>
+          </tr>
+      {% endfor %}
+  </table>
+</div>
+</form>
+</body>
+</html>
+{% endblock %}

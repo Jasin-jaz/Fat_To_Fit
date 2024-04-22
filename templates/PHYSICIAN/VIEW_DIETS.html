@@ -1,0 +1,39 @@
+{% extends "PHYSICIAN/physician_INDEX.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+  <form action="" method="get">
+  <div align="center">
+  <h2>DIET PLANS</h2><br>
+  <table class="table table-condensed">
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">BATCH</th>
+    <th scope="col">NAME</th>
+    <th scope="col">DIET DETAILS</th>
+    <th scope="col">START DATE</th>
+    <th scope="col">END DATE</th>
+    <th scope="col">STATUS</th>
+  </tr>
+  <tr>
+    {% for i in data %}
+    <td>{{ loop.index }}</td>
+    <td>{{ i['batch'] }}</td>
+    <td>{{ i['name'] }}</td>
+    <td>{{ i['details'] }}</td>
+    <td>{{ i['start'] }}</td>
+    <td>{{ i['end'] }}</td>
+    <td>{{ i['status'] }}</td>
+    {% endfor %}
+  </tr>
+</table>
+</div>
+</form>
+</body>
+</html>
+{% endblock %}

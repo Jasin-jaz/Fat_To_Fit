@@ -1,0 +1,31 @@
+{% extends "USER/USER_INDEX.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>batch details</title>
+</head>
+<body>
+  <form action="" method="get">
+  <div align="center">
+    <h2>BATCH DETAILS</h2><br>
+    <table class="table table-condensed">
+      <tr>
+        <th width="25" scope="col">BATCH ID</th>
+        <th width="79" scope="col">BATCH</th>
+        <th width="60" scope="col">TIME</th>
+      </tr>
+      <tr>
+          {% for i in data %}
+        <td>{{ i['id'] }}</td>
+        <td>{{ i['batch'] }}</td>
+        <td>{{ i['time'] }}</td>
+      </tr>
+        {% endfor %}
+  </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

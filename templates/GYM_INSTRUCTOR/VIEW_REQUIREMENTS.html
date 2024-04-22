@@ -1,0 +1,44 @@
+{% extends "GYM_INSTRUCTOR/gymindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>gym equipments</title>
+<style>
+ h2{
+  margin-left:250px;
+  margin-right:10px
+}
+</style>
+</head>
+
+<body><form action="" method="get">
+  <br><h2>EQUIPMENTS DETAILS</h2><br>
+  <div style="margin-left: 120px;margin-right: 0%;">
+  <table class="table table-condensed">
+        <tr>
+          <th ></th>
+          <th>IMAGE</th>
+          <th>EQUIPMENTS</th>
+          <th>DESCRIPTION</th>
+          <th>AMOUNT</th>
+          <th>PURCHASE DATE</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+          <td>{{loop.index  }}</td>
+          <td><img src="{{ i['pic'] }}" width="50"></td>
+          <td>{{ i['name'] }}</td>
+          <td>{{ i['description'] }}</td>
+          <td>{{ i['amount'] }}</td>
+          <td>{{ i['buy_date'] }}</td>
+  </td>
+  </tr>
+    {% endfor %}
+</div>
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

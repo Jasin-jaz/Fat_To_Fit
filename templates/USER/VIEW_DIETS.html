@@ -1,0 +1,47 @@
+{% extends "USER/USER_INDEX.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Diets</title>
+</head>
+<body><div align="center">
+    <h2>DIET DASHBOARD</h2><br>
+    <h3>{{ session['n'] }}</h3><br>
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Diet details</th>
+                <th>Start date</th>
+                <th>End date</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ i.details }}</td>
+                    <td>{{ i.start }}</td>
+                    <td>{{ i.end }}</td>
+                    <td>{{ i.status }}</td>
+                    <td>
+                        {% if i.status=='pending' %}
+                          <a href="/start_diet/{{ i.name }}">START</a>
+                        {% elif i.status=='started' %}
+                          <a href="/end_diet/{{ i.name }}"><span style="color:rgb(0, 110, 255)">COMPLETE</span></a>
+                        {% elif i.status=='completed' %}
+                          <span style="color:green">COMPLETED</span>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+{% endblock %}

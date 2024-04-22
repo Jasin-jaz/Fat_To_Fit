@@ -1,0 +1,30 @@
+{% extends "ADMIN/adminindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body><form action="/send_reply1/{{ data['COMPLAINT_ID'] }}" method="post"><table class="table-borderless">
+    <tr>
+        <th>COMPLAINT</th>
+        <td><label for="textfield1"></label>
+      <input type="text" name="textfield1" id="textfield1" class="form-control"  value="{{ data['COMPLAINTS'] }} "/></td>
+
+    </tr>
+  <tr>
+    <th scope="row">REPLY</th>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" class="form-control" /></td>
+  </tr>
+  <tr>
+      <th></th>
+    <th  scope="row"><br><input type="submit" name="button" id="button" value="SEND" class="btn btn-dark"/></th>
+    </tr>
+</table>
+</form>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends "ADMIN/adminindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body><form action="" method="get">
+  <div align="center">
+  <h2>USERS</h2><br>
+    <table  class="table table-condensed">
+      <tr>
+        <th width="10" height="82" scope="col">#</th>
+        <th width="59" scope="col">NAME</th>
+        <th width="91" scope="col">ADDRESS</th>    
+        <th width="70" scope="col">PHONE</th>
+        <th width="86" scope="col">PROFILE</th>
+        <th width="96" scope="col">EMAIL_ID</th>
+        <th width="283" scope="col"></th>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <td height="233">{{loop.index}}</td>
+        <td>{{ i['name'] }}</td>
+        <td>{{ i['hname'] }}<br>{{ i['place'] }}<br>{{ i['post'] }}<br>{{ i['pin'] }}</td>  
+        <td>{{ i['phone'] }}</td>
+        <td><img src="{{ i['pic'] }}" width="50" alt=""></td>
+        <td>{{ i['email'] }}</td>
+        <td><a href="/newalloc/{{ i['user_id'] }}">ALLOCATE INSTRUCTOR</a></td>
+      </tr>
+      {% endfor %}
+  </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

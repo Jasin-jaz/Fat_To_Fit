@@ -1,0 +1,34 @@
+{% extends "USER/USER_INDEX.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Allocated Gym Instructor</title>
+</head>
+<body>
+    <div align="center">
+    <h1>Allocated Gym Instructor Details</h1><br>
+    {% if data %}
+        {% for i in data %}
+        <div style="border:1px solid #ccc; font-weight: bold; font-family: sans-serif;">
+            <p></p>
+            <img src="{{ i.pic }}" alt="Instructor Image" width="200px" height="200px" >
+            <p></p>
+            <p>Name: {{ i.name }}</p>
+            <p>House Name: {{ i.housename }}</p>
+            <p>Place: {{ i.place }}</p>
+            <p>Post: {{ i.post }}</p>
+            <p>Pin: {{ i.pin }}</p>
+            <p>Phone: {{ i.phone }}</p>
+            <p>Email: {{ i.email }}</p>
+            <p></p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No allocated gym instructor found for the user.</p> 
+    {% endif %}
+    </div>
+</body>
+</html>
+{% endblock %}

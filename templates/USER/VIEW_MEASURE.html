@@ -1,0 +1,51 @@
+{% extends "USER/USER_INDEX.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Measures</title>
+    <style>
+        h2{
+         margin-left:180px;
+         margin-right:-50px
+       }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+    <h2>COMPARE MEASUREMENT</h2><br>
+    <div style="margin-left: 130px;margin-right: -50px;">
+    {% if data %}
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Height<br>cm</th>
+                <th>Weight<br>kg</th>
+                <th>BMI</th>
+                <th>Date</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ i.height }}</td>
+                    <td>{{ i.weight }}</td>
+                    <td>{{ i.bmi}}</td>
+                    <td>{{ i.measure_date }}</td>
+                    <td><a href="/del_measure/{{ i['measure_id'] }}">delete</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>EMPTY MEASUREMENT DATA</p> 
+    {% endif %}
+</div>
+</form>
+</body>
+</html>
+{% endblock %}

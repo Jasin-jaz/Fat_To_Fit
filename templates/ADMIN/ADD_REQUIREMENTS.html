@@ -1,0 +1,50 @@
+{% extends "ADMIN/adminindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+  <form action="" method="post" enctype="multipart/form-data">  
+  <div align="center">
+  <h2>ADD REQUIREMENTS</h2>
+    <table class="table-borderless">
+      <tr>
+        <th width="160" height="85" scope="row">EQUIPMENT</th>
+        <td><label for="textfield1"></label>
+          <input type="text" name="textfield1" id="textfield1" class="form-control"/></td>
+        </tr>
+        <tr>
+          <th height="72" scope="row">IMAGE</th>
+          <td><label for="fileField"></label>
+          <input type="file" name="fileField" id="fileField" class="form-control"/></td>
+        </tr>
+        <tr>
+          <th height="51" scope="row">DESCRIPTION</th>
+          <td><label for="textfield2"></label>
+          <input type="text" name="textfield2" id="textfield2" class="form-control"/></td>
+        </tr>
+        <tr>
+          <th height="46" scope="row">AMOUNT</th>
+          <td><label for="textfield3"></label>
+          <input type="text" name="textfield3" id="textfield3" class="form-control"/></td>
+        </tr>
+        <tr>
+          <th height="63" scope="row">PURCHASE DATE</th>
+          <td><label for="textfield4"></label>
+          <input type="date" name="textfield4" id="textfield4" class="form-control"/></td>
+        </tr>
+        <tr>
+      <tr align="center">
+        <th width="160" height="50"><br><input type="submit" name="button" id="button" value="ADD" class="btn btn-dark"/></th>
+      </tr>
+  </table>
+  </div>
+</form>
+
+</body>
+</html>
+{% endblock %}

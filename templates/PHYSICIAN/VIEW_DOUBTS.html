@@ -1,0 +1,46 @@
+{% extends "PHYSICIAN/physician_INDEX.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>View doubts</title>
+</head>
+
+<body>
+  <form action="" method="get">
+  <div align="center">
+  <h2>DOUBTS</h2><br>
+  <table class="table table-condensed">
+  <tr>
+    <th scope="col"></th>
+    <th scope="col">NAME</th>
+    <th scope="col">SUBJECT</th>
+    <th scope="col">DETAILS</th>
+    <th scope="col">REPLY</th>
+    <th scope="col">REPLY_DATE</th>
+    <th scope="col">&nbsp;</th>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td>{{ i['USERNAME'] }}</td>
+    <td>{{ i['DATE'] }}</td>
+    <td>{{ i['DETAILS'] }}</td>
+    <td>{{ i['REPLY'] }}</td>
+    <td>{{ i['REPLY_DATE'] }}</td>
+    <td>
+    {% if i['REPLY_DATE'] == 'pending' %}
+          <a href="/prply/{{ i['id'] }}">REPLY</a>
+        {% else %}
+          REPLIED
+        {% endif %}
+    </td>
+  </tr>
+    {% endfor %}
+</table>
+</div>
+</form>
+</body>
+</html>
+{% endblock %}

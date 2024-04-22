@@ -1,0 +1,39 @@
+{% extends "GYM_INSTRUCTOR/gymindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>User Informations</title>
+</head>
+<body>
+<form action="" method="get">
+  <div align="center">
+  <h2>ALL USER INFORMATIONS</h2><br>
+    <table  class="table table-condensed" align="center">
+      <tr>
+        <th scope="col"></th>
+        <th  scope="col">NAME</th>
+        <th scope="col">ADDRESS</th>
+        <th  scope="col">PHONE</th>
+        <th scope="col">EMAIL_ID</th>
+        <th scope="col">BATCH</th>
+        <th scope="col">PROFILE</th>
+      </tr>
+      {% for i in data %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ i['name'] }}</td>
+        <td>HOUSE NAME:{{ i['hname'] }}<br>PLACE:{{ i['place'] }}<br>POST:{{ i['post'] }}<br>PIN:{{ i['pin'] }}</td>
+        <td>{{ i['phone'] }}</td>
+        <td>{{ i['email'] }}</td>
+        <td>{{ i['batch_id'] }}</td>
+        <td><img src=" {{ i['pic'] }}" width="50"></td>
+      </tr>
+      {% endfor %}
+  </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

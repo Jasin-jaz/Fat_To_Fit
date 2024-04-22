@@ -1,0 +1,67 @@
+{% extends "ADMIN/adminindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>update user</title>
+</head>
+
+<body>
+<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1"><table width="200" border="1">
+  <tr>
+    <th scope="row">NAME</th>
+    <td><label for="textfield1"></label>
+      <input type="text" name="textfield1" id="textfield1" value="{{ data['name'] }}" /></td>
+  </tr>
+    <tr>
+    <th scope="row">HOUSE NAME</th>
+    <td><label for="textfield2"></label>
+      <input type="text" name="textfield2" id="textfield2" value="{{ data['hname'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">PLACE</th>
+    <td><label for="textfield3"></label>
+      <input type="text" name="textfield3" id="textfield3" value="{{ data['place'] }}" /></td>
+  </tr>
+    <tr>
+    <th scope="row">POST</th>
+    <td><label for="textfield4"></label>
+      <input type="text" name="textfield4" id="textfield4" value="{{ data['post'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">PIN</th>
+    <td><label for="textfield5"></label>
+      <input type="text" name="textfield5" id="textfield5" value="{{ data['pin'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">PHONE</th>
+    <td><label for="textfield6"></label>
+      <input type="text" name="textfield6" id="textfield6" value="{{ data['phone'] }}
+"/></td>
+  </tr>
+  <tr>
+    <th scope="row">PROFILE</th>
+    <td><label for="fileField"></label>
+        <img src="{{ data['pic'] }}" height="100" width="100" alt=""/>
+      <input type="file" name="fileField" id="fileField" value="{{ data['pic'] }}" /></td>
+  </tr>
+  <tr>
+    <th scope="row">EMAIL_ID</th>
+    <td><label for="textfield7"></label>
+      <input type="text" name="textfield7" id="textfield7" value="{{ data['email'] }}"/></td>
+  </tr>
+  <tr>
+    <th cope="row">BATCH</th>
+    <td><label for="textfield8"></label>
+       <input type="text" name="textfield8" id="textfield8" value="{{ data['batch_id']}}"/></td>
+  </tr>
+  <tr>
+    <th colspan="2" scope="row"><input type="submit" name="button" id="button" value="UPDATE" /></th>
+    </tr>
+</table>
+
+</form>
+</body>
+</html>
+{% endblock %}

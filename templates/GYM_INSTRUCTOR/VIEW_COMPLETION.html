@@ -1,0 +1,39 @@
+{% extends "GYM_INSTRUCTOR/gymindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>completion status</title>
+</head>
+
+<body><form action="" method="get">
+  <div align="center">
+        <h2>COMPLETION STATUS</h2><br>
+        <table class="table table-borderless">
+            <tr>
+                <th>#</th>
+                <th>User Name</th>
+                <th>Instructor Name</th>
+                <th>Starting Date</th>
+                <th>Ending Date</th>
+                <th>Status</th>
+            </tr>
+            
+            {% for row in data %}
+                <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ row.user_name }}</td>
+                    <td>{{ row.instructor_name }}</td>
+                    <td>{{ row.STARTING_DATE }}</td>
+                    <td>{{ row.ENDING_DATE }}</td>
+                    <td>{{ row.STATUS }}</td>
+                </tr>
+            {% endfor %}
+            
+        </table>
+  </div>
+</form>
+</body>
+</html>
+{% endblock %}

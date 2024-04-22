@@ -1,0 +1,55 @@
+{% extends "ADMIN/adminindex.html" %}
+{% block body %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <div align="center">
+    <table class="table table-condensed">
+      <tr>
+        <th>CHOOSE TYPE</th>
+        <td>
+          <select NAME="S">
+            <option>USER</option>
+            <option>GYM INSTRUCTOR</option>
+            <option>PHYSICIAN</option>
+          </select>
+        </td><td></td>
+        <td><input type="submit" value="SEARCH"/></td>
+      </tr>
+  </table>
+  </div>
+  <div align="center">
+   <br> <h2>VIEW COMPLAINTS FROM {{ d }}</h2><br><br>
+    <table width="689" border="0">
+      <tr>
+        <th width="89" height="42" scope="col">#</th>
+        <th width="111" scope="col">USERNAME</th>
+        <th width="173" scope="col">COMPLAINTS</th>
+        <th width="82" scope="col">DATE</th>     
+      </tr>
+      {% for i in data %}
+      <tr>
+        <td height="152">{{ loop.index }}</td>
+        <td>{{ i['name'] }}</td>
+        <td>{{ i['COMPLAINTS'] }}</td>
+        <td>{{ i['DATE'] }}</td>
+        <td>   
+        {% if i['REPLY_DATE'] == 'pending' %}
+          <a href="/send_reply/{{ i['COMPLAINT_ID'] }}">REPLY</a>
+        {% else %}
+          REPLIED
+        {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+</div>
+</form>
+</body>
+</html>
+{% endblock %}
