@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="208965b4-0714-48ce-a145-3edeb3735518" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/fat_to_fit$fat_to_fit.coverage" NAME="fat_to_fit Coverage Results" MODIFIED="1648896171363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>container-login100</find>
+      <find>send_co</find>
+      <find>ADMIN</find>
+      <find>delete</find>
+      <find>ask_doubt</find>
+      <find>blo</find>
+      <find>ul</find>
+      <find>user_home</find>
+      <find>add_</find>
+      <find>repl</find>
+      <find>doubts</find>
+      <find>send</find>
+      <find>SEND</find>
+      <find>view</find>
+      <find>add_med</find>
+      <find>user</find>
+      <find>str</find>
+      <find>quan</find>
+      <find>John Doe</find>
+      <find>bookmed</find>
+      <find>okk</find>
+      <find>mycart</find>
+      <find>phyci</find>
+      <find>phys</find>
+      <find>add_m</find>
+      <find>add_phy</find>
+      <find>select_batch_user</find>
+      <find>send_reply</find>
+      <find>view_b</find>
+      <find>physician</find>
+    </findStrings>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2XLfT6xrsqzhLzZwp6Lmq2ffD46" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\PycharmProjects\fat_to_fit\templates\PHISICIAN" />
+      <recent name="C:\Users\ASUS\PycharmProjects\fat_to_fit\templates\USER" />
+      <recent name="C:\Users\ASUS\PycharmProjects\fat_to_fit\templates" />
+      <recent name="C:\Users\ASUS\PycharmProjects\fat_to_fit\static\new" />
+      <recent name="C:\Users\ASUS\PycharmProjects\fat_to_fit\static\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\PycharmProjects\fat_to_fit\templates\USER" />
+      <recent name="C:\Users\ASUS\PycharmProjects\fat_to_fit\static\login\images\icons" />
+      <recent name="C:\Users\ASUS\PycharmProjects\fat_to_fit\templates\ADMIN" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="fat_to_fit" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <module name="fat_to_fit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fat_to_fit.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <module name="fat_to_fit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="208965b4-0714-48ce-a145-3edeb3735518" name="Default" comment="" />
+      <created>1638439175775</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638439175775</updated>
+      <workItem from="1698673716766" duration="1424000" />
+      <workItem from="1698675905030" duration="1645000" />
+      <workItem from="1698679895342" duration="929000" />
+      <workItem from="1698681138024" duration="1624000" />
+      <workItem from="1698682903743" duration="1080000" />
+      <workItem from="1698684655115" duration="663000" />
+      <workItem from="1698930594792" duration="517000" />
+      <workItem from="1699074699550" duration="98000" />
+      <workItem from="1699110621237" duration="1397000" />
+      <workItem from="1699758896440" duration="1233000" />
+      <workItem from="1700289141411" duration="619000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/fat_to_fit$fat_to_fit.coverage" NAME="fat_to_fit Coverage Results" MODIFIED="1700289156864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  </component>
+</project>
